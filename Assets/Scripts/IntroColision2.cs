@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroColision : MonoBehaviour
+public class IntroColision2 : MonoBehaviour
 {
+    CuentaKills cuenta;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        cuenta = GetComponent<CuentaKills>();
     }
+
+    int cont = 0;
 
     // Update is called once per frame
     void Update()
@@ -18,12 +22,16 @@ public class IntroColision : MonoBehaviour
 
     void OnCollisionEnter(Collision other) {        
         string name = other.gameObject.name;
-        Debug.Log("Entra en colision con: " + name);
+        string tag = other.gameObject.tag;
+        Debug.Log("Entra en colision con: " + name + " de tag:" + tag);
 
-        if(name.Equals("Enemigo")){
+        if(other.gameObject.CompareTag("Enemy")){
             Destroy(other.gameObject);
+            cont++;
+            cuenta.txt_score.text = cont.ToString();
         }
 
     }
+
 
 }
