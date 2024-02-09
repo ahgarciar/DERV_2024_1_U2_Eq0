@@ -805,6 +805,7 @@ GameObject:
   - component: {fileID: 1506339366}
   - component: {fileID: 1506339367}
   - component: {fileID: 1506339368}
+  - component: {fileID: 1506339369}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -976,6 +977,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt_score: {fileID: 767894228}
+--- !u!114 &1506339369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506339359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903e0378c786f4be08e977b5c5f308b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1550742420
 PrefabInstance:
   m_ObjectHideFlags: 0
